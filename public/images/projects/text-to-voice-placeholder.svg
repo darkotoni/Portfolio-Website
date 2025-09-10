@@ -1,0 +1,83 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" rx="8" fill="#1a1a1a"/>
+  <rect x="20" y="20" width="360" height="260" rx="4" fill="#2d2d2d" stroke="#404040"/>
+  
+  <!-- Terminal/IDE simulation -->
+  <rect x="20" y="20" width="360" height="30" fill="#3a3a3a"/>
+  <circle cx="35" cy="35" r="4" fill="#ff5f56"/>
+  <circle cx="50" cy="35" r="4" fill="#ffbd2e"/>
+  <circle cx="65" cy="35" r="4" fill="#27ca3f"/>
+  
+  <!-- Code lines -->
+  <rect x="40" y="70" width="120" height="3" fill="#569cd6"/>
+  <rect x="170" y="70" width="80" height="3" fill="#dcdcaa"/>
+  <rect x="260" y="70" width="60" height="3" fill="#ce9178"/>
+  
+  <rect x="40" y="85" width="90" height="3" fill="#9cdcfe"/>
+  <rect x="140" y="85" width="150" height="3" fill="#d4d4d4"/>
+  
+  <rect x="40" y="100" width="40" height="3" fill="#c586c0"/>
+  <rect x="90" y="100" width="100" height="3" fill="#ce9178"/>
+  <rect x="200" y="100" width="80" height="3" fill="#d4d4d4"/>
+  
+  <rect x="40" y="115" width="200" height="3" fill="#608b4e"/>
+  
+  <rect x="40" y="135" width="60" height="3" fill="#569cd6"/>
+  <rect x="110" y="135" width="120" height="3" fill="#dcdcaa"/>
+  <rect x="240" y="135" width="40" height="3" fill="#d4d4d4"/>
+  
+  <!-- Audio wave visualization -->
+  <g transform="translate(80, 180)">
+    <rect x="0" y="40" width="3" height="20" fill="#4fc3f7"/>
+    <rect x="8" y="30" width="3" height="40" fill="#4fc3f7"/>
+    <rect x="16" y="20" width="3" height="60" fill="#4fc3f7"/>
+    <rect x="24" y="35" width="3" height="30" fill="#4fc3f7"/>
+    <rect x="32" y="25" width="3" height="50" fill="#4fc3f7"/>
+    <rect x="40" y="15" width="3" height="70" fill="#4fc3f7"/>
+    <rect x="48" y="30" width="3" height="40" fill="#4fc3f7"/>
+    <rect x="56" y="40" width="3" height="20" fill="#4fc3f7"/>
+    <rect x="64" y="35" width="3" height="30" fill="#4fc3f7"/>
+    <rect x="72" y="20" width="3" height="60" fill="#4fc3f7"/>
+    <rect x="80" y="30" width="3" height="40" fill="#4fc3f7"/>
+    <rect x="88" y="25" width="3" height="50" fill="#4fc3f7"/>
+    <rect x="96" y="40" width="3" height="20" fill="#4fc3f7"/>
+    <rect x="104" y="35" width="3" height="30" fill="#4fc3f7"/>
+    <rect x="112" y="15" width="3" height="70" fill="#4fc3f7"/>
+    <rect x="120" y="30" width="3" height="40" fill="#4fc3f7"/>
+    <rect x="128" y="40" width="3" height="20" fill="#4fc3f7"/>
+    <rect x="136" y="25" width="3" height="50" fill="#4fc3f7"/>
+    <rect x="144" y="35" width="3" height="30" fill="#4fc3f7"/>
+    <rect x="152" y="20" width="3" height="60" fill="#4fc3f7"/>
+    <rect x="160" y="40" width="3" height="20" fill="#4fc3f7"/>
+    <rect x="168" y="30" width="3" height="40" fill="#4fc3f7"/>
+    <rect x="176" y="35" width="3" height="30" fill="#4fc3f7"/>
+    <rect x="184" y="25" width="3" height="50" fill="#4fc3f7"/>
+    <rect x="192" y="40" width="3" height="20" fill="#4fc3f7"/>
+    <rect x="200" y="15" width="3" height="70" fill="#4fc3f7"/>
+    <rect x="208" y="30" width="3" height="40" fill="#4fc3f7"/>
+    <rect x="216" y="35" width="3" height="30" fill="#4fc3f7"/>
+    <rect x="224" y="40" width="3" height="20" fill="#4fc3f7"/>
+    <rect x="232" y="25" width="3" height="50" fill="#4fc3f7"/>
+  </g>
+  
+  <!-- Icons -->
+  <g transform="translate(45, 185)">
+    <!-- Microphone icon -->
+    <rect x="8" y="0" width="8" height="20" rx="4" fill="#ff6b6b" stroke="#ff5252" stroke-width="1"/>
+    <rect x="6" y="25" width="12" height="8" fill="none" stroke="#ff5252" stroke-width="1" rx="6"/>
+    <line x1="12" y1="33" x2="12" y2="40" stroke="#ff5252" stroke-width="2"/>
+    <line x1="6" y1="40" x2="18" y2="40" stroke="#ff5252" stroke-width="2"/>
+  </g>
+  
+  <g transform="translate(320, 185)">
+    <!-- Speaker icon -->
+    <rect x="0" y="10" width="6" height="10" fill="#4caf50"/>
+    <polygon points="6,10 14,5 14,25 6,20" fill="#4caf50"/>
+    <path d="M 16 8 Q 20 12 16 22" stroke="#4caf50" stroke-width="2" fill="none"/>
+    <path d="M 19 6 Q 26 15 19 24" stroke="#4caf50" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="250" text-anchor="middle" fill="#e0e0e0" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Text-to-Speech Converter</text>
+  <text x="200" y="270" text-anchor="middle" fill="#9e9e9e" font-family="Arial, sans-serif" font-size="12">Python Audio Processing Tool</text>
+</svg>

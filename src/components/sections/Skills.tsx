@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { skillCategories, softSkills, certifications } from '@/data/skills'
-import { Award, ExternalLink } from 'lucide-react'
+import { Award } from 'lucide-react'
 
 export default function Skills() {
   const [activeTab, setActiveTab] = useState(0)
@@ -61,18 +61,15 @@ export default function Skills() {
                     <div className="space-y-4">
                       {category.skills.map((skill, skillIndex) => (
                         <div key={skillIndex} className="group">
-                          <div className="flex justify-between items-center mb-2">
-                            <span className="text-sm font-medium">{skill.name}</span>
-                            <span className="text-xs text-muted-foreground">{skill.level}%</span>
-                          </div>
-                          <div className="w-full bg-secondary rounded-full h-2">
-                            <div
-                              className="h-2 rounded-full transition-all duration-1000 group-hover:brightness-110"
-                              style={{
-                                width: `${skill.level}%`,
-                                backgroundColor: skill.color,
-                              }}
-                            />
+                          <div className="flex justify-between items-center py-3 px-4 rounded-lg hover:bg-accent/30 transition-colors duration-200">
+                            <div className="flex items-center space-x-3">
+                              <div 
+                                className="w-3 h-3 rounded-full"
+                                style={{ backgroundColor: skill.color }}
+                              />
+                              <span className="font-medium">{skill.name}</span>
+                            </div>
+                            <span className="text-sm text-muted-foreground">{skill.experience}</span>
                           </div>
                         </div>
                       ))}
@@ -135,15 +132,7 @@ export default function Skills() {
                       <h4 className="font-semibold mb-2 group-hover:text-primary transition-colors">
                         {cert.name}
                       </h4>
-                      <p className="text-sm text-muted-foreground mb-4">{cert.issuer}</p>
-                      
-                      <a
-                        href={cert.url}
-                        className="inline-flex items-center text-sm text-primary hover:text-primary/80 font-medium"
-                      >
-                        View Credential
-                        <ExternalLink className="h-3 w-3 ml-1" />
-                      </a>
+                      <p className="text-sm text-muted-foreground">{cert.issuer}</p>
                     </div>
                   ))}
                 </div>

@@ -31,9 +31,9 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 w-full z-50 transition-all duration-300 will-change-transform ${
         isScrolled
-          ? 'bg-background/80 backdrop-blur-md border-b border-border'
+          ? 'bg-background/80 backdrop-blur-md border-b border-border shadow-lg'
           : 'bg-transparent'
       }`}
     >
@@ -45,27 +45,28 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navigation.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-foreground/80 hover:text-foreground transition-colors duration-200 hover:scale-105 transform"
+                className="relative text-foreground/80 hover:text-foreground transition-all duration-200 hover:scale-105 transform group py-2"
               >
                 {item.name}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
             
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full hover:bg-accent transition-colors duration-200"
+              className="p-2 rounded-full hover:bg-accent transition-all duration-200 hover:scale-110 transform will-change-transform"
               aria-label="Toggle theme"
             >
               {theme === 'light' ? (
-                <Moon className="h-5 w-5" />
+                <Moon className="h-5 w-5 transition-transform duration-200" />
               ) : (
-                <Sun className="h-5 w-5" />
+                <Sun className="h-5 w-5 transition-transform duration-200" />
               )}
             </button>
           </div>

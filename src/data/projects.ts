@@ -2,78 +2,81 @@ export const projects = [
   {
     id: 1,
     title: "Powell's Bowells - Restaurant Card Selector",
-    description: "A collaborative web application that helps users make dining decisions by creating restaurant card decks and providing random recommendations.",
-    longDescription: "Decision fatigue when choosing restaurants? This collaborative web app lets users create restaurant card decks and get random recommendations, making dining decisions effortless. Developed as part of CSE 110 with an 11-person team.",
-    image: "/images/projects/restaurant-selector.png",
-    technologies: ["HTML5", "CSS3", "JavaScript", "GitHub Pages"],
+    description: "Led cross-functional team of 11 developers through full software development lifecycle using Agile methodologies to solve decision fatigue in restaurant selection.",
+    longDescription: "As Product Owner for this CSE 110 capstone project, I led an 11-person cross-functional team through complete product development from ideation to deployment. Applied Agile/Scrum methodologies with sprint planning, daily standups, and retrospectives to deliver a user-centered solution for restaurant decision fatigue.",
+    image: "/images/projects/restaurantselector.png",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Agile", "Figma", "Miro"],
     features: [
-      "Create and manage custom restaurant decks",
-      "Smart random restaurant recommendation engine",
-      "Clean, intuitive user interface",
-      "Responsive web design"
+      "Product roadmap and feature prioritization",
+      "Cross-functional team leadership and sprint planning",
+      "User research and iterative design process",
+      "CI/CD pipeline and development standards (JSDoc, ADRs)",
+      "Stakeholder communication and project delivery"
     ],
     liveUrl: "https://darkotoni.github.io/Restaurant-Card-Selector-app/",
     githubUrl: "https://github.com/darkotoni/Restaurant-Card-Selector-app",
-    category: "Web Development",
+    category: "Product Management",
     status: "Completed",
     teamSize: "11 developers",
     highlights: [
-      "Led collaborative development with 11-person team",
-      "Implemented modular code architecture with testing suite",
-      "Created comprehensive project documentation",
-      "Designed user-centered experience with Figma prototypes"
+      "Led cross-functional team through complete product lifecycle",
+      "Established development standards and CI/CD pipeline",
+      "Applied Agile methodologies with sprint planning and standups",
+      "Created wireframes and prototypes using Miro and Figma",
+      "Successfully delivered product on time and within scope"
     ]
   },
   {
     id: 2,
-    title: "Spotify Mini Overlay",
-    description: "A desktop overlay application that provides the perfect middle ground between Spotify's tiny mini player and full application.",
-    longDescription: "Spotify's native mini player is too small, but the full app takes up too much screen space. This desktop overlay provides the perfect middle ground with an expandable interface and full playback controls.",
-    image: "/images/projects/spotify-overlay.png",
-    technologies: ["JavaScript", "HTML", "Electron", "Spotify API"],
+    title: "Spotify Mini Overlay - UX Product Solution",
+    description: "Identified user pain point with Spotify's interface limitations and developed a desktop solution that balances functionality with minimal screen real estate.",
+    longDescription: "Conducted user research to identify the gap between Spotify's too-small mini player and space-consuming full application. Applied product thinking to design and develop a customizable desktop overlay that provides the optimal middle ground, demonstrating user-centered design principles and technical execution.",
+    image: "/images/projects/minispotifyoverlay.png",
+    technologies: ["JavaScript", "Electron", "Spotify API", "User Research", "UX Design"],
     features: [
-      "Always-on-top overlay that works with any application",
-      "Expandable/collapsible interface design",
-      "Full playback controls with volume management",
-      "Real-time track progress and album art display",
-      "Secure OAuth2 Spotify account authentication"
+      "User research and problem identification",
+      "Product requirement definition and scope",
+      "Cross-platform desktop application architecture",
+      "API integration and authentication flow design",
+      "User interface optimization for minimal footprint"
     ],
     liveUrl: null,
     githubUrl: "https://github.com/darkotoni/SpotifyMiniOverlay",
-    category: "Desktop Application",
+    category: "Product Development",
     status: "Completed",
     teamSize: "Solo project",
     highlights: [
-      "Built cross-platform desktop application",
-      "Implemented secure OAuth2 Spotify API integration",
-      "Created privacy-focused architecture (no credential storage)",
-      "Solved real UX problem with elegant, minimal design"
+      "Identified and solved real user pain point through research",
+      "Designed optimal user experience balancing features and simplicity",
+      "Implemented secure API integration with privacy-first approach",
+      "Created scalable cross-platform solution architecture"
     ]
   },
   {
     id: 3,
-    title: "F1 Quantitative Analysis",
-    description: "A Python-based data analysis project exploring correlations between Formula 1 team performance and sponsor company stock performance.",
-    longDescription: "Analyzing the correlation between Formula 1 team performance and sponsor company stock performance to identify investment opportunities and market trends using advanced statistical methods and data visualization.",
-    image: "/images/projects/f1-analysis.png",
-    technologies: ["Python", "Pandas", "Matplotlib", "NumPy", "Data Analysis"],
+    title: "F1 Quantitative Trading Strategy",
+    description: "Led quantitative analysis for UCSD investment competition, applying ARIMA and GARCH models to F1 sponsor performance data for data-driven investment recommendations.",
+    longDescription: "As Quantitative Analyst at UCSD's Sustainable Investment Group, I led the quantitative section for a stock pitch competition. Applied advanced statistical models including ARIMA, GARCH, and Rolling Sharpe to analyze correlations between Formula 1 team performance and sponsor company stock performance, delivering data-driven investment recommendations to stakeholders.",
+    image: "/images/projects/mclaren_google_partnership_analysis.png",
+    technologies: ["Python", "ARIMA", "GARCH", "Pandas", "Yahoo Finance API", "Statistical Modeling"],
     features: [
-      "Comprehensive CSV datasets for F1 teams and stock prices",
-      "Performance correlation analysis across multiple seasons",
-      "Team-specific analysis modules (Ferrari, McLaren, Red Bull, Oracle)",
-      "Automated visualization generation",
-      "Statistical correlation models"
+      "Quantitative model development and backtesting",
+      "Cross-domain data integration (sports + financial markets)",
+      "Statistical modeling with ARIMA and GARCH frameworks",
+      "Investment recommendation framework and presentation",
+      "Performance metrics and risk assessment analysis"
     ],
     liveUrl: null,
     githubUrl: "https://github.com/darkotoni/F1-Quant-project",
-    category: "Data Science",
+    category: "Quantitative Analysis",
     status: "Completed",
-    teamSize: "Solo project",
+    teamSize: "Led quantitative section",
     highlights: [
-      "Integrated multi-domain data sources (sports + financial)",
-      "Developed modular analysis framework for different teams",
-      "Created advanced statistical correlation models",
-      "Generated actionable insights from complex datasets"
+      "Led quantitative analysis for competitive investment pitch",
+      "Applied advanced statistical models (ARIMA, GARCH, Rolling Sharpe)",
+      "Developed comprehensive data pipeline using Yahoo Finance API",
+      "Delivered data-driven investment recommendations to stakeholders",
+      "Demonstrated cross-domain analytical thinking (sports + finance)"
     ]
   },
   {
@@ -81,7 +84,7 @@ export const projects = [
     title: "Text-to-Voice MP3 Converter",
     description: "A Python utility that converts text input into speech and downloads it as an MP3 file for easy audio content creation.",
     longDescription: "A practical Python application that demonstrates text-to-speech technology by converting user input text into speech and automatically downloading it as an MP3 file.",
-    image: "/images/projects/text-to-voice.png",
+    image: "/images/projects/text-to-voice-placeholder.svg",
     technologies: ["Python", "Text-to-Speech", "Audio Processing"],
     features: [
       "Text input to speech conversion",
@@ -105,8 +108,8 @@ export const projects = [
 
 export const projectCategories = [
   "All",
-  "Web Development",
-  "Desktop Application", 
-  "Data Science",
+  "Product Management",
+  "Product Development",
+  "Quantitative Analysis",
   "Utility Tool"
 ]

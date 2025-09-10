@@ -2,24 +2,13 @@
 
 import { useState } from 'react'
 import { projects, projectCategories } from '@/data/projects'
-import ProjectCard from '@/components/ui/ProjectCard'
-import ProjectModal from '@/components/ui/ProjectModal'
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('All')
-  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null)
 
   const filteredProjects = activeCategory === 'All' 
     ? projects 
     : projects.filter(project => project.category === activeCategory)
-
-  const handleViewDetails = (project: typeof projects[0]) => {
-    setSelectedProject(project)
-  }
-
-  const handleCloseModal = () => {
-    setSelectedProject(null)
-  }
 
   return (
     <section id="projects" className="py-20">
@@ -42,7 +31,7 @@ export default function Projects() {
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105 transform ${
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                   activeCategory === category
                     ? 'bg-primary text-primary-foreground'
                     : 'bg-secondary text-secondary-foreground hover:bg-accent'
@@ -56,49 +45,72 @@ export default function Projects() {
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 gap-8">
             {filteredProjects.map((project) => (
-              <ProjectCard
-                key={project.id}
-                project={project}
-                onViewDetails={handleViewDetails}
-              />
+              <div key={project.id} className="bg-card rounded-lg border border-border overflow-hidden hover:shadow-lg transition-all duration-300">
+                <div className="aspect-video bg-secondary/30 relative overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">
+                      {project.category}
+                    </span>
+                    <span className="text-sm text-muted-foreground">{project.status}</span>
+                  </div>
+                  
+                  <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
+                  <p className="text-muted-foreground mb-4 line-clamp-2">{project.description}</p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.technologies.slice(0, 3).map((tech) => (
+                      <span key={tech} className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">
+                        {tech}
+                      </span>
+                    ))}
+                    {project.technologies.length > 3 && (
+                      <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">
+                        +{project.technologies.length - 3} more
+                      </span>
+                    )}
+                  </div>
+                  
+                  <div className="flex gap-3">
+                    {project.liveUrl && (
+                      <a 
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 px-4 py-2 bg-primary text-primary-foreground text-center rounded-lg text-sm hover:bg-primary/90 transition-colors"
+                      >
+                        Live Demo
+                      </a>
+                    )}
+                    <a 
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 px-4 py-2 bg-secondary text-secondary-foreground text-center rounded-lg text-sm hover:bg-accent transition-colors"
+                    >
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
 
           {/* Empty State */}
           {filteredProjects.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-muted-foreground">
-                No projects found in this category.
-              </p>
+              <p className="text-muted-foreground">No projects found in this category.</p>
             </div>
           )}
-
-          {/* Call to Action */}
-          <div className="text-center mt-16">
-            <div className="glass-effect rounded-lg p-8 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-semibold mb-4">
-                Interested in Working Together?
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                I'm always open to discussing new opportunities and exciting projects. 
-                Let's create something amazing together!
-              </p>
-              <a
-                href="#contact"
-                className="inline-block px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-200 hover:scale-105 transform font-medium"
-              >
-                Get In Touch
-              </a>
-            </div>
-          </div>
         </div>
       </div>
-
-      {/* Project Modal */}
-      <ProjectModal 
-        project={selectedProject} 
-        onClose={handleCloseModal} 
-      />
     </section>
   )
 }

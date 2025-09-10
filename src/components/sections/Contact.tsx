@@ -16,22 +16,22 @@ export default function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'darko.toni@example.com',
-      href: 'mailto:darko.toni@example.com',
+      value: 'dariantan7@gmail.com',
+      href: 'mailto:dariantan7@gmail.com',
       color: 'text-blue-500'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'San Diego, CA',
+      value: 'San Ramon, CA',
       href: null,
       color: 'text-green-500'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: '+1 (925) 364-0754',
+      href: 'tel:+19253640754',
       color: 'text-purple-500'
     }
   ]
@@ -46,13 +46,13 @@ export default function Contact() {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: 'https://linkedin.com/in/darkotoni',
+      href: 'https://www.linkedin.com/in/darian-tan/',
       color: 'hover:text-blue-600'
     },
     {
       icon: MessageCircle,
       label: 'Discord',
-      href: '#',
+      href: '#antoni2670',
       color: 'hover:text-indigo-600'
     }
   ]
