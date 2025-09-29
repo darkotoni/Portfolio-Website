@@ -53,10 +53,10 @@ export default function About() {
               <div className="prose prose-lg dark:prose-invert">
                 <AnimatedSection animation="fadeIn" delay={100}>
                   <p className="text-muted-foreground leading-relaxed text-base lg:text-lg">
-                    I'm a Computer Science student at UC San Diego with a passion for product 
-                    management and quantitative analysis. Currently serving as a Quantitative 
-                    Analyst at UCSD's Sustainable Investment Group, I apply ARIMA, GARCH, and 
-                    statistical modeling to provide data-driven investment recommendations.
+                    I'm a Computer Science student at UC San Diego with a passion for product
+                    management and quantitative analysis. Currently serving as an Innovation for
+                    National Security intern at the United States Department of War, where I apply
+                    my technical skills and analytical mindset to support critical national security initiatives.
                   </p>
                 </AnimatedSection>
                 
@@ -106,7 +106,7 @@ export default function About() {
                   <AnimatedSection animation="slideUp" delay={700}>
                     <div className="flex justify-between items-center py-2">
                       <span className="text-muted-foreground">Current Role</span>
-                      <span className="font-medium text-green-500">Quantitative Analyst</span>
+                      <span className="font-medium text-green-500">National Security Intern</span>
                     </div>
                   </AnimatedSection>
                 </div>
