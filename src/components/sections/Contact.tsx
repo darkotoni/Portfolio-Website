@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Mail, MapPin, Phone, Send, Github, Linkedin, MessageCircle } from 'lucide-react'
+import { sendEmail } from '@/lib/email'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -11,6 +12,7 @@ export default function Contact() {
     message: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
   const contactInfo = [
     {
@@ -67,16 +69,29 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitStatus('idle')
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' })
-    setIsSubmitting(false)
-    
-    // You would typically send this data to your backend or email service
-    alert('Message sent successfully! I\'ll get back to you soon.')
+    try {
+      // Send email using EmailJS
+      const success = await sendEmail({
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      })
+
+      if (success) {
+        setSubmitStatus('success')
+        setFormData({ name: '', email: '', subject: '', message: '' })
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -185,6 +200,23 @@ export default function Contact() {
                   )}
                 </button>
               </form>
+
+              {/* Status Messages */}
+              {submitStatus === 'success' && (
+                <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
+                  <p className="text-green-800 dark:text-green-200 text-sm">
+                    ✅ Message sent successfully! I'll get back to you soon.
+                  </p>
+                </div>
+              )}
+              
+              {submitStatus === 'error' && (
+                <div className="mt-4 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
+                  <p className="text-red-800 dark:text-red-200 text-sm">
+                    ❌ Failed to send message. Please try again or contact me directly at dariantan7@gmail.com
+                  </p>
+                </div>
+              )}
             </div>
 
             {/* Contact Information */}
