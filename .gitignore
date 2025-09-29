@@ -18,6 +18,16 @@ build/
 .env.development.local
 .env.test.local
 .env.production.local
+.env.*.local
+
+# Security and sensitive files
+.env.example
+config.local.js
+secrets.json
+private.key
+*.pem
+*.p12
+*.pfx
 
 # Cache directories
 .cache/

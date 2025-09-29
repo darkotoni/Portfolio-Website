@@ -3,6 +3,12 @@ import { emailjsConfig, EmailTemplateParams } from './emailjs'
 
 export const sendEmail = async (formData: EmailTemplateParams): Promise<boolean> => {
   try {
+    // Validate that all required credentials are available
+    if (!emailjsConfig.publicKey || !emailjsConfig.serviceId || !emailjsConfig.templateId) {
+      console.error('EmailJS credentials are missing. Please check your environment variables.')
+      return false
+    }
+
     // Initialize EmailJS with your public key
     emailjs.init(emailjsConfig.publicKey)
 
