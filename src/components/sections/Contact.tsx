@@ -1,6 +1,6 @@
 'use client'
 
-import { Mail, MapPin, Phone, Github, Linkedin, MessageCircle } from 'lucide-react'
+import { Mail, MapPin, Phone, Github, Linkedin } from 'lucide-react'
 
 export default function Contact() {
 
@@ -40,12 +40,6 @@ export default function Contact() {
       label: 'LinkedIn',
       href: 'https://www.linkedin.com/in/darian-tan/',
       color: 'hover:text-blue-600'
-    },
-    {
-      icon: MessageCircle,
-      label: 'Discord',
-      href: '#antoni2670',
-      color: 'hover:text-indigo-600'
     }
   ]
 

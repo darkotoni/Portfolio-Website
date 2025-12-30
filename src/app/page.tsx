@@ -63,10 +63,10 @@ export default function Home() {
               </div>
               
               <p className="text-lg text-muted-foreground mb-8 max-w-2xl leading-relaxed">
-                I bridge technology and business strategy to create impactful products. As a 
-                CS student at UCSD and Quantitative Analyst at the Sustainable Investment Group, 
-                I combine technical expertise with product thinking to drive data-driven decisions 
-                and deliver exceptional user experiences.
+                I bridge technology and business strategy to create impactful products. As a
+                CS student at UCSD (BS/MS AI/ML) and AI Training Specialist at Handshake AI,
+                I combine technical expertise with product thinking to drive data-driven decisions.
+                Previously drove product development for mission-critical defense software at the U.S. Department of Defense.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

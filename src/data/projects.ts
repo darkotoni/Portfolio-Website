@@ -1,6 +1,35 @@
 export const projects = [
   {
     id: 1,
+    title: "Naval Doctrine Compliance System (i4NS LENS)",
+    description: "Scoped and designed RAG-powered system to analyze naval mission logs against doctrine policies, surfacing compliance gaps and actionable recommendations for U.S. Navy operations.",
+    longDescription: "As Product Owner for this Department of Defense innovation project, I led product discovery through 40+ customer interviews with naval officers to scope and design an intelligent system that analyzes mission logs against naval doctrine. Applied Lean Startup and Agile methodologies to build an MVP that operates in offline, air-gapped environments for secure naval deployment.",
+    image: "/images/projects/naval-doctrine.png",
+    technologies: ["Python", "FastAPI", "LangGraph", "React", "FAISS", "Docker", "Ollama"],
+    features: [
+      "40+ customer discovery interviews with naval stakeholders",
+      "Product requirements definition for air-gapped deployment",
+      "RAG pipeline architecture with local LLM integration",
+      "Mission log upload and automated compliance analysis",
+      "Side-by-side doctrine vs. performance comparison dashboard",
+      "Offline-capable design for secure naval vessel deployment"
+    ],
+    liveUrl: null,
+    githubUrl: "https://github.com/21phuctran/i4NS_LENS",
+    category: "National Security",
+    status: "Completed",
+    teamSize: "Cross-functional team",
+    highlights: [
+      "Conducted 40+ customer interviews to validate product assumptions",
+      "Designed for offline deployment in air-gapped naval environments",
+      "Led product roadmap from discovery to MVP delivery",
+      "Applied Lean Startup principles with weekly sprint cycles",
+      "Built RAG-powered system for automated doctrine compliance analysis",
+      "Collaborated on FastAPI + React architecture implementation"
+    ]
+  },
+  {
+    id: 2,
     title: "Powell's Bowells - Restaurant Card Selector",
     description: "Led cross-functional team of 11 developers through full software development lifecycle using Agile methodologies to solve decision fatigue in restaurant selection.",
     longDescription: "As Product Owner for this CSE 110 capstone project, I led an 11-person cross-functional team through complete product development from ideation to deployment. Applied Agile/Scrum methodologies with sprint planning, daily standups, and retrospectives to deliver a user-centered solution for restaurant decision fatigue.",
@@ -27,7 +56,7 @@ export const projects = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     title: "Spotify Mini Overlay - UX Product Solution",
     description: "Identified user pain point with Spotify's interface limitations and developed a desktop solution that balances functionality with minimal screen real estate.",
     longDescription: "Conducted user research to identify the gap between Spotify's too-small mini player and space-consuming full application. Applied product thinking to design and develop a customizable desktop overlay that provides the optimal middle ground, demonstrating user-centered design principles and technical execution.",
@@ -53,7 +82,7 @@ export const projects = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: "F1 Quantitative Trading Strategy",
     description: "Led quantitative analysis for UCSD investment competition, applying ARIMA and GARCH models to F1 sponsor performance data for data-driven investment recommendations.",
     longDescription: "As Quantitative Analyst at UCSD's Sustainable Investment Group, I led the quantitative section for a stock pitch competition. Applied advanced statistical models including ARIMA, GARCH, and Rolling Sharpe to analyze correlations between Formula 1 team performance and sponsor company stock performance, delivering data-driven investment recommendations to stakeholders.",
@@ -80,7 +109,7 @@ export const projects = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     title: "Text-to-Voice MP3 Converter",
     description: "A Python utility that converts text input into speech and downloads it as an MP3 file for easy audio content creation.",
     longDescription: "A practical Python application that demonstrates text-to-speech technology by converting user input text into speech and automatically downloading it as an MP3 file.",
@@ -108,6 +137,7 @@ export const projects = [
 
 export const projectCategories = [
   "All",
+  "National Security",
   "Product Management",
   "Product Development",
   "Quantitative Analysis",

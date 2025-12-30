@@ -8,22 +8,22 @@ export default function About() {
     {
       icon: Brain,
       title: 'Product Strategy',
-      description: 'Experience leading cross-functional teams and managing product roadmaps from ideation to delivery.',
+      description: 'Led product discovery with 40+ customer interviews and drove Agile cycles for DoD mission-critical software.',
     },
     {
       icon: Database,
-      title: 'Quantitative Analysis',
-      description: 'Applied ARIMA, GARCH, and statistical modeling for data-driven investment recommendations.',
+      title: 'AI/ML Expertise',
+      description: 'Pursuing MS in AI/ML, evaluating generative AI models and building RAG-powered systems with LangGraph.',
     },
     {
       icon: Globe,
       title: 'Leadership Experience',
-      description: 'Led 100+ member organizations and development teams through complete product lifecycles.',
+      description: 'Led 100+ member organizations and cross-functional teams through complete product lifecycles.',
     },
     {
       icon: Code2,
       title: 'Technical Foundation',
-      description: 'Strong programming skills in Python, JavaScript, and C++ with AI/ML experience.',
+      description: 'Strong programming skills in Python, JavaScript, and C++ with FastAPI, React, and Docker experience.',
     },
   ]
 
@@ -53,28 +53,29 @@ export default function About() {
               <div className="prose prose-lg dark:prose-invert">
                 <AnimatedSection animation="fadeIn" delay={100}>
                   <p className="text-muted-foreground leading-relaxed text-base lg:text-lg">
-                    I'm a Computer Science student at UC San Diego with a passion for product
-                    management and quantitative analysis. Currently serving as an Innovation for
-                    National Security intern at the United States Department of War, where I apply
-                    my technical skills and analytical mindset to support critical national security initiatives.
+                    I'm a Computer Science student at UC San Diego pursuing my BS and MS in AI/ML,
+                    with a passion for product management at the intersection of technology and national
+                    security. I've served as a National Security Product Intern at the U.S. Department
+                    of Defense, where I drove Lean Startup and Agile product development cycles for
+                    mission-critical defense software.
                   </p>
                 </AnimatedSection>
-                
+
                 <AnimatedSection animation="fadeIn" delay={300}>
                   <p className="text-muted-foreground leading-relaxed text-base lg:text-lg">
-                    My leadership experience includes founding and managing digital marketing 
-                    initiatives that increased traffic by 20%, and leading cross-functional teams 
-                    through complete software development lifecycles using Agile methodologies. 
-                    I excel at stakeholder communication and turning complex data into actionable insights.
+                    Through 40+ customer discovery interviews with naval officers, I've learned to
+                    validate product assumptions, refine problem statements, and prioritize high-impact
+                    features. I excel at leading cross-functional teams, defining requirements, and
+                    building roadmaps that align usability, technical feasibility, and mission objectives.
                   </p>
                 </AnimatedSection>
-                
+
                 <AnimatedSection animation="fadeIn" delay={500}>
                   <p className="text-muted-foreground leading-relaxed text-base lg:text-lg">
-                    With experience leading 100+ member organizations and managing digital initiatives 
-                    that drove 20% traffic growth, I'm passionate about building products that solve real 
-                    problems through user-centered design and data-driven decision making. I thrive 
-                    at the intersection of technology, strategy, and user experience.
+                    Currently working as an AI Training & Evaluation Specialist at Handshake AI, I evaluate
+                    generative AI outputs against quality and alignment criteria, providing feedback that
+                    informs model tuning and product evaluation frameworks. I'm passionate about building
+                    products that solve real problems through user-centered design and data-driven decision making.
                   </p>
                 </AnimatedSection>
               </div>
@@ -94,7 +95,7 @@ export default function About() {
                   <AnimatedSection animation="slideUp" delay={500}>
                     <div className="flex justify-between items-center py-2">
                       <span className="text-muted-foreground">Education</span>
-                      <span className="font-medium">UCSD CS (3.6 GPA)</span>
+                      <span className="font-medium">UCSD CS (3.5 GPA)</span>
                     </div>
                   </AnimatedSection>
                   <AnimatedSection animation="slideUp" delay={600}>
@@ -106,7 +107,7 @@ export default function About() {
                   <AnimatedSection animation="slideUp" delay={700}>
                     <div className="flex justify-between items-center py-2">
                       <span className="text-muted-foreground">Current Role</span>
-                      <span className="font-medium text-green-500">National Security Intern</span>
+                      <span className="font-medium text-green-500">AI Training Specialist</span>
                     </div>
                   </AnimatedSection>
                 </div>
